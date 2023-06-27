@@ -71,3 +71,19 @@
   .news-card img {
     border-radius: 15px 15px 0 0;
   }
+  .news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 15px;
+  }
+  .news-title {
+    font-weight: 600;
+    color: #0b0028;
+  }
+  .news-description {
+    color: #6f6f6f;
+    text-align: justify;
+    margin: 0.8em 0 1em 0;
+  }
