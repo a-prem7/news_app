@@ -15,7 +15,7 @@
   .heading-container {
     background-color: #b90d0d;
     color: #ffffff;
-    font-size: 2.5em;
+    font-size: 2.0em;
     padding: 0.8em 0;
     position: fixed;
     top: 0;
@@ -105,4 +105,13 @@
     .container {
       grid-template-columns: repeat(1, 1fr);
     }
+  }
+  .footer {
+    
+    bottom: 0;
+    background-color: #b90d0d;
+    color: #ffffff;
+    font-size: 1.0em;
+    text-align: center;
+
   }
