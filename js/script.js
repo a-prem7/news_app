@@ -1,4 +1,4 @@
-//API Used: http://newsapi.org/s/canada-news-api
+//API Used: https://newsapi.org/s/canada-news-api
 const container = document.querySelector(".container");
 const optionsContainer = document.querySelector(".options-container");
 
@@ -54,7 +54,7 @@ const selectCategory = (e, category) => {
   options.forEach((element) => {
     element.classList.remove("active");
   });
-  requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`;
+  requestURL = `http://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`;
   e.target.classList.add("active");
   getNews();
 };
@@ -72,6 +72,6 @@ const init = () => {
   createOptions();
 };
 window.onload = () => {
-  requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=general&apiKey=${apiKey}`;
+  requestURL = `http://newsapi.org/v2/top-headlines?country=${country}&category=general&apiKey=${apiKey}`;
   init();
 };
