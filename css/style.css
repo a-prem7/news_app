@@ -90,7 +90,7 @@
   .view-button {
     position: relative;
     text-decoration: none;
-    background-color: #cb202d;
+    background-color:black;
     color: #ffffff;
     width: 7em;
     text-align: center;
@@ -98,7 +98,7 @@
     border-radius: 5px;
   }
   .active {
-    background-color: #cb202d;
+    background-color: black;
     color: #ffffff;
   }
   @media only screen and (max-width: 768px) {

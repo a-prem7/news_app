@@ -2,7 +2,7 @@
 const container = document.querySelector(".container");
 const optionsContainer = document.querySelector(".options-container");
 
-const country = "ca";
+const country = "us";
 const options = [
   "general",
   "entertainment",
@@ -65,4 +65,13 @@ const createOptions = () => {
       i == "general" ? "active" : ""
     }" onclick="selectCategory(event,'${i}')">${i}</button>`;
   }
+};
+const init = () => {
+  optionsContainer.innerHTML = "";
+  getNews();
+  createOptions();
+};
+window.onload = () => {
+  requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=general&apiKey=${apiKey}`;
+  init();
 };
