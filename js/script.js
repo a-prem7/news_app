@@ -13,3 +13,37 @@ const options = [
 ];
 
 let requestURL;
+
+// create cards from data
+
+const generateUI = (articles) => {
+  for (let item of articles) {
+    let card = document.createElement("div");
+    card.classList.add("news-card");
+    card.innerHTML = `<div class="news-image-container">
+    <img src="${item.urlToImage || "./newspaper.jpg"}" alt="" />
+      </div>
+      <div class="news-content">
+        <div class="news-title">
+          ${item.title}
+        </div>
+        <div class="news-description">
+        ${item.description || item.content || ""}
+        </div>
+        <a href="${item.url}" target="_blank" class="view-button">Read More</a>
+      </div>`;
+    container.appendChild(card);
+  }
+};
+
+//News API Call
+const getNews = async () => {
+  container.innerHTML = "";
+  let response = await fetch(requestURL);
+  if (!response.ok) {
+    alert("Data unavailable at the moment. Please try again later");
+    return false;
+  }
+  let data = await response.json();
+  generateUI(data.articles);
+};
